@@ -4,28 +4,83 @@
 // 12821 -> да
 // 23432 -> да
 
-int i, x = 0;
-int secnum = 0;
+
 Console.WriteLine("Введите число: ");
-int pol = Convert.ToInt32((Console.ReadLine()));
-for(i = pol; i > 0; i = (i / 10))
+int Number = Convert.ToInt32(Console.ReadLine()); 
+string number = Console.ReadLine();
+Console.WriteLine(Palindrom(number));
+
+string Palindrom(string num)
 {
-    x = i % 10;
-    Console.Write(x);
-    secnum = x;
+    int len = num.Length;
+    if(len==5)
+    {
+        if (num[0]==num[4] && num[1]==num[3])
+            return "Да, это палиндром";
+        else
+            return "Нет, это не палиндром";
+    }
+    return "Число не пятизначное";
 }
 
-if(secnum == pol)
-{
-    Console.WriteLine("Да, это палиндром");
-}
-else
-{
-Console.WriteLine("Нет, это не палиндром");
-}
-Console.WriteLine(pol);
-Console.WriteLine(secnum);
-Console.ReadKey();
+
+// Console.WriteLine("Введите число: ");
+// int Number = Convert.ToInt32(Console.ReadLine()); 
+
+// void Number(int num)
+// if (num[0]==num[4] && num[1]=num[3])
+// {
+//     Console.WriteLine("Да, это палиндромом");
+// }
+// else
+// {
+//     Console.WriteLine("Нет, это не палиндромом");
+// }
+// Number(int num)
+
+
+
+
+
+
+// Console.WriteLine("Введите число: ");
+// int num1 = Convert.ToInt32(Console.ReadLine()); 
+// int num2 = Convert.ToInt32(Console.ReadLine()); 
+// int num3 = Convert.ToInt32(Console.ReadLine()); 
+// int num4 = Convert.ToInt32(Console.ReadLine()); 
+// int num5 = Convert.ToInt32(Console.ReadLine()); 
+
+// if(num1==num5 && num3==num2)
+// {
+//     Console.WriteLine("Да, это палиндром");
+// }
+// else
+// {
+// Console.WriteLine("Нет, это не палиндром");
+// }
+
+// int i, x = 0;
+// int secnum = 0;
+// Console.WriteLine("Введите число: ");
+// int pol = Convert.ToInt32((Console.ReadLine()));
+// for(i = pol; i > 0; i = (i / 10))
+// {
+//     x = i % 10;
+//     Console.Write(x);
+//     secnum = x;
+// }
+
+// if(secnum == pol)
+// {
+//     Console.WriteLine("Да, это палиндром");
+// }
+// else
+// {
+// Console.WriteLine("Нет, это не палиндром");
+// }
+// Console.WriteLine(pol);
+// Console.WriteLine(secnum);
+// Console.ReadKey();
 
 
 
