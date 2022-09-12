@@ -4,24 +4,55 @@
 // 12821 -> да
 // 23432 -> да
 
-
-Console.WriteLine("Введите число: ");
-int Number = Convert.ToInt32(Console.ReadLine()); 
-string number = Console.ReadLine();
-Console.WriteLine(Palindrom(number));
-
-string Palindrom(string num)
+int DataEntry(string message) //Метод ввода целого числа
 {
-    int len = num.Length;
-    if(len==5)
-    {
-        if (num[0]==num[4] && num[1]==num[3])
-            return "Да, это палиндром";
-        else
-            return "Нет, это не палиндром";
-    }
-    return "Число не пятизначное";
+    System.Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
 }
+
+int TurnNumber(int num) // Метод разворота числа
+{
+    int rev = 0;
+    while (num > 0)
+        {
+            int digit = num % 10;
+            rev = rev * 10 + digit;
+            num = num / 10;
+        }
+    return rev;
+}
+
+int number = DataEntry("Введите пятизначное число -> "); // Вводим пятизначное число
+int revnumber = TurnNumber(number); // разворачиваем число и сохраняем его во временной переменной
+if(number == revnumber) // Сравниваем введенное число и его перевернутый вариант
+{ // Если совпадает значит число полином
+    System.Console.WriteLine($"Число {number} полиндром"); // Если не совпадает значит не полином
+}
+else
+{
+    System.Console.WriteLine($"Число {number} не является полиндромом");
+}
+
+
+
+
+// Console.WriteLine("Введите число: ");
+// int Number = Convert.ToInt32(Console.ReadLine()); 
+// string number = Console.ReadLine();
+// Console.WriteLine(Palindrom(number));
+
+// string Palindrom(string num)
+// {
+//     int len = num.Length;
+//     if(len==5)
+//     {
+//         if (num[0]==num[4] && num[1]==num[3])
+//             return "Да, это палиндром";
+//         else
+//             return "Нет, это не палиндром";
+//     }
+//     return "Число не пятизначное";
+// }
 
 
 // Console.WriteLine("Введите число: ");
