@@ -8,7 +8,6 @@ int size = 8;
 int[] array = new int [size];
 FillArray(array);
 Console.WriteLine("{0}", string.Join(", ", array));
-// PrintArray(array);
 
 void FillArray(int[] array)
 {
