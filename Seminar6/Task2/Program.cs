@@ -38,14 +38,3 @@ else
 
 
 
-
-// bool Coordinats (int x, int y)
-// {
-//     int x=0;
-//     int y=0;
-//     if(x=(b2-b1)/(k1-k2))
-//     {
-//        return y=(k1*(b2-b1))/(k1-k2)+b1;
-//     }    
-// }
-
