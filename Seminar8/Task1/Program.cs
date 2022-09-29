@@ -32,27 +32,26 @@ void FillArray(int[,] array)
 void PrintArray(int[,] array)
 {
     int sum = 0;
-    int sumrow1 = 0;
-    int sumrow2=0;
+    int sumrow1 = 0;    
     int row = 0;
     
     for(int i = 0; i < array.GetLength(0); i++) 
     {
-        sumrow2 = 0;
-        for(int j = 0; j < array.GetLength(1); j++) 
+        int sumrow2 = 1;
+        for(int j = 0; j < array.GetLength(1)-1; j++) 
         {   
             sumrow2 += array[i, j];  
         } 
         if(sumrow2 < sumrow1)
             {   
                 sum = sumrow2; 
-                row = i;    
+                row = i-2;    
             }
                 sumrow1 = sumrow2;
     }
     Console.WriteLine("\n\t Наименьшаяя сумма = {0}", sum);
     Console.WriteLine("\n\t Номер строки = {0}", row); 
-    Console.WriteLine();
+    Console.ReadKey();
 }
 
 
