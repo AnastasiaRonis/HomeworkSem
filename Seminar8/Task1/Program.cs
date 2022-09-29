@@ -18,13 +18,11 @@ System.Console.WriteLine();
 PrintArray(array);
 
 void FillArray(int[,] array)
-{
-    // Random random = new Random();
+{    
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
-        {
-            // array[i,j] = random.Next (1,10);
+        {            
             Console.Write(array[i, j] + " ");
         }
         Console.WriteLine();
@@ -41,11 +39,11 @@ void PrintArray(int[,] array)
     for(int i = 0; i < array.GetLength(0); i++) 
     {
         sumrow2 = 0;
-        for(int j = 0; j < array.GetLength(1); j+=0) 
+        for(int j = 0; j < array.GetLength(1); j++) 
         {   
             sumrow2 += array[i, j];  
         } 
-        if(sumrow2 <= sumrow1)
+        if(sumrow2 < sumrow1)
             {   
                 sum = sumrow2; 
                 row = i;    
