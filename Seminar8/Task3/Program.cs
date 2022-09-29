@@ -18,7 +18,6 @@ Console.WriteLine($"");
 
 FillArray(array);
 System.Console.WriteLine();
-// PrintArray(array);
 System.Console.WriteLine(Contains(array));
 
 void FillArray(int[,] array)
@@ -27,8 +26,8 @@ void FillArray(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i,j] = new Random().Next(10,50);
-            System.Console.Write(array[i,j] + " ");
+            array[i, j] = new Random().Next(10, 50);
+            System.Console.Write(array[i, j] + " ");
         }
         System.Console.WriteLine();
     }
@@ -37,17 +36,17 @@ void FillArray(int[,] array)
 bool Contains(int[,] array)
 {
     System.Console.WriteLine("Введите value: ");
-    int value = Convert.ToInt32(Console.ReadLine());     
+    int value = Convert.ToInt32(Console.ReadLine());
     for (int i = 0; i < array.GetLength(0); i++)
-    {        
+    {
         for (int j = 0; j < array.GetLength(1); j++)
-        {                      
-            if(array[i,j] == value)
+        {
+            if (array[i, j] == value)
             {
                 return true;
             }
             return false;
-        }              
+        }
     }
     return false;
 }
