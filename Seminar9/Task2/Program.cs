@@ -15,5 +15,5 @@ int SumNaturalNumbers(int M, int N)
 {
     if (N == M)
         return M;
-      return N + SumNaturalNumbers(M, N-1);
+    return N + SumNaturalNumbers(M, N - 1);
 }
